@@ -12,6 +12,9 @@
             border-radius: 5px;
             background-color: #f9f9f9;
         }
+        .subject-group{
+            text-align: center;
+        }
         .form-group {
             margin-bottom: 10px;
         }
@@ -43,7 +46,11 @@
 </head>
 <body>
 <div class="container" >
+    <div class="subject-group">
     <h1>입력 폼</h1>
+    <img th:src="@{/images/email.png}" style="height:60px" alt="email"/>
+    </div>
+
     <form th:action="@{/submit}" method="post">
         <div class="form-group">
             <label for="name">이름:</label>
@@ -61,6 +68,7 @@
     </form>
     <div th:if="${successMessage}" class="success-message" th:text="${successMessage}"></div>
 </div>
+
 
 </body>
 </html>
